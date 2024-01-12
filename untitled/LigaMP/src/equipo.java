@@ -1,17 +1,19 @@
 
 import java.util.Objects;
-
 public class equipo {
-    private String nombre;
-    private String ciudad;
+
+
+
+    private final String nombre;
+    private  final String ciudad;
     private final int numMaxJugadores = 22;
-    private Jugador[] ListaJugadores;
+    private jugador[] ListaJugadores;
 
     public equipo(String nombEquipo, String nombCiudad)
     {
         this.nombre = nombEquipo;
         this.ciudad = nombCiudad;
-        ListaJugadores = new Jugador[numMaxJugadores];
+        ListaJugadores = new jugador[numMaxJugadores];
     }
 
     public String getNombre() {
@@ -50,7 +52,7 @@ public class equipo {
             }
         }
     }
-    public void adquirirJugador(Jugador jugador)
+    public void adquirirJugador(jugador jugador)
     {
         for (int posicion = 0;posicion < ListaJugadores.length;posicion++)
         {
