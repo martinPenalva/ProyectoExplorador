@@ -127,10 +127,10 @@ public class Main {
         }
         else
         {
-            System.out.println("*********" + miEquipo.getNombre() + "****************************");
+            System.out.println("*********" + miEquipo.getNombre() + "***********************");
             System.out.println("NOMBRE\t\t" + "POSICIÓN\t\t" + "EDAD\t" + "NAC\t\t\t" + "LESIONADO");
             miEquipo.mostrarListaJugadores();
-            System.out.println("*********************************************");
+            System.out.println("***************************************");
         }
     }
     public static void venderJugador()
