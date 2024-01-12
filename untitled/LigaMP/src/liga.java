@@ -20,3 +20,46 @@ public class liga {
             }
         }
     }
+    public int getNumEquipos()
+    {
+        int nume = 0;
+        for(int equipo = 0;equipo<listadoEquipos.length;equipo++)
+        {
+            if(listadoEquipos[equipo] != null)
+            {
+                nume ++;
+            }
+        }
+        return nume;
+    }
+    public equipo getEquipo(String nombreEquipo)
+    {
+        equipo EquipoNombre = null;
+        for (int nombre = 0;nombre< listadoEquipos.length;nombre++)
+        {
+            if (listadoEquipos[nombre] != null) {
+                if (Objects.equals(listadoEquipos[nombre].getNombre(), nombreEquipo)) {
+                    EquipoNombre = listadoEquipos[nombre];
+                    break;
+                }
+            }
+        }
+        return EquipoNombre;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+    public void anadirEquipo(equipo equipo)
+    {
+        for (int posicion = 0;posicion < listadoEquipos.length;posicion++)
+        {
+            if(listadoEquipos[posicion] == null)
+            {
+                listadoEquipos[posicion] = equipo;
+                break;
+            }
+        }
+    }
+}
+
