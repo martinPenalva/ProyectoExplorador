@@ -59,3 +59,36 @@ public class equipo {
             }
         }
     }
+    public void venderJugador(String nombreJugador)
+    {
+        for (int posicion = 0;posicion < ListaJugadores.length;posicion++)
+        {
+            if (ListaJugadores[posicion] != null) {
+                if (Objects.equals(ListaJugadores[posicion].getNombre(), nombreJugador))
+                {
+                    for (int borrar = posicion; borrar < ListaJugadores.length; borrar++)
+                    {
+                        if (borrar < ListaJugadores.length-1)
+                        {
+                            ListaJugadores[borrar] = ListaJugadores[borrar + 1];
+                        } else
+                        if (borrar == ListaJugadores.length-1)
+                        {
+                            ListaJugadores[posicion] = null;
+                            System.out.println("Vendiendo jugador…");
+                            System.out.println("Jugador vendido.");
+                        }
+                    }
+                    break;
+                }
+            }
+            else if (posicion >= ListaJugadores.length-1)
+            {
+                System.out.println("El jugador no existe.");
+
+                break;
+            }
+        }
+    }
+}
+
