@@ -1,7 +1,7 @@
 import java.util.Objects;
 import java.util.Scanner;
 public class Main {
-    //cmentqrio
+    //cmentqriooooo
     private static liga miLiga;
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
