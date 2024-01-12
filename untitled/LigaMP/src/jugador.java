@@ -1,7 +1,7 @@
 
 import java.util.Objects;
 
-public class Jugador {
+public class jugador {
 
     private String nombre;
     private String nacionalidad;
