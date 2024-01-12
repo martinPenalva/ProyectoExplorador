@@ -9,7 +9,7 @@ public class jugador {
     private String posicion;
     private boolean lesionado;
 
-    public Jugador(String nombJugador, String nacionalidadJu, int edadJug, String posicionJu)
+    public jugador(String nombJugador, String nacionalidadJu, int edadJug, String posicionJu)
     {
         nombre = nombJugador;
         nacionalidad = nacionalidadJu;
