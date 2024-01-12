@@ -99,4 +99,54 @@ public class Main {
                     break;
                 }
             }
+            System.out.println("Creando Jugador...");
+            Jugador miJugador = new Jugador(jugador, nacionalidad, edad, poscion);
+            System.out.println("Insertando Jugador...");
+            miEquipo.adquirirJugador(miJugador);
+        }
+    }
+    public static void VerLiga()
+    {
+        System.out.println("**********COMPOSICIÓN DE LA LIGA*************************");
+        System.out.println("Equipo\t\tCiudad\t\tNumero jugadores");
+        miLiga.mostrarListadoEquipos();
+        System.out.println("*********************************************************");
+    }
+    public static void verJugadores()
+    {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Indique el equipo que quiere visualizar:");
+        String equipo = teclado.nextLine();
+        Equipo miEquipo = miLiga.getEquipo(equipo);
+        if (miEquipo == null)
+        {
+            System.out.println("El equipo indicado no existe.");
+        }
+        else
+        {
+            System.out.println("*********" + miEquipo.getNombre() + "****************************");
+            System.out.println("NOMBRE\t\t" + "POSICIÓN\t\t" + "EDAD\t" + "NAC\t\t\t" + "LESIONADO");
+            miEquipo.mostrarListaJugadores();
+            System.out.println("*********************************************");
+        }
+    }
+    public static void venderJugador()
+    {
+        Scanner teclado = new Scanner(System.in);
+        System.out.println("Inserte el nombre del equipo donde quiere vender el jugador:");
+        String equipo = teclado.nextLine();
+        Equipo miEquipo = miLiga.getEquipo(equipo);
+        if(miEquipo == null)
+        {
+            System.out.println("El equipo indicado no existe.");
+        }
+        else
+        {
+            System.out.println("Inserte el nombre del jugador:");
+            String nombre = teclado.nextLine();
+            miEquipo.venderJugador(nombre);
+        }
+    }
+}
+
 
